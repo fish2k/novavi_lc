@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Novavi Panel</title>
 
   <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+  <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/lc.css">
 
   <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
   <div class="lc-side">
@@ -56,17 +58,17 @@
             <div class="lc-block-title">Визитка</div>
   
             <div class="lc-setup-profile">
-              <div class="lc-setup-profile-userpic">
+              <div class="lc-setup-profile-userpic upload-userpic">
                 <div class="lc-setup-profile-userpic-upload">
                   <img src="images/add-photo.svg" alt="">
                 </div>
               </div>
               <form class="lc-profile-upload">
-                <input type="file" class="lc-profile-file">
+                <input type="file" class="lc-profile-file upload-userpic-src">
               </form>
               <script>
-                $('.lc-setup-profile-userpic').click(function () {
-                  $('.lc-profile-file').trigger('click');
+                $('.upload-userpic').click(function () {
+                  $('.upload-userpic-src').trigger('click');
                 });
               </script>
               <div class="lc-setup-profile-username">Usename</div>
@@ -82,7 +84,7 @@
               Противоположная точка зрения подразумевает, <br>
               что многие известные личности
             </div>
-            <a href="javascript:void(0)" class="lc-button">Создать визитку</a>
+            <a href="javascript:void(0)" class="lc-button" data-toggle="modal" data-target="#profileSetup">Создать визитку</a>
           </div>
         </div>
       </div>
@@ -192,5 +194,113 @@
       </div>
     </div>
   </div>
+
+  <!-- <a href="javascript:void(0)" class="toggle-btn" data-toggle="modal" data-target="#profileSetup">test</a> -->
+
+  <div class="modal fade" id="profileSetup" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-custom">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-close-abs" data-dismiss="modal"></div>
+
+        <div class="modal-custom-title">Результат</div>
+
+        <form class="modal-profile-form">
+          <div class="modal-theme">
+            <div class="modal-theme-title">Цветовая схема</div>
+            <div class="modal-theme-select">
+              <label for="light" class="modal-theme-select-color">
+                <input id="light" type="radio" name="theme" class="theme-select-input" checked>
+                <div class="theme-color theme-color-light"></div>
+              </label>
+              <label for="dark" class="modal-theme-select-color">
+                <input id="dark" type="radio" name="theme" class="theme-select-input">
+                <div class="theme-color theme-color-dark"></div>
+              </label>
+              <label for="purple" class="modal-theme-select-color">
+                <input id="purple" type="radio" name="theme" class="theme-select-input">
+                <div class="theme-color theme-color-purple"></div>
+              </label>
+            </div>
+          </div>
+  
+          <div class="modal-upload-photo">
+            <div class="lc-setup-profile-userpic modal-upload">
+              <div class="lc-setup-profile-userpic-upload">
+                <img src="images/add-photo.svg" alt="">
+              </div>
+            </div>
+            <div class="modal-upload-body">
+              <div class="modal-upload-title">Загрузить изображение</div>
+              <div class="modal-upload-desc">Есть над чем задуматься: явные признаки победы</div>
+            </div>
+            <input type="file" class="lc-profile-file modal-upload-photo-input">
+          </div>
+  
+          <div class="modal-row">
+            <div class="modal-row-title">Описание</div>
+            <textarea class="input-default" placeholder="Не более 300 символов"></textarea>
+          </div>
+  
+          <div class="modal-row">
+            <div class="modal-row-title">Ссылки на соцсети</div>
+            <div class="modal-label lable-social label-vk"><input type="text" class="input-default" placeholder="VK" value="salut1991"></div>
+            <div class="modal-label lable-social label-ig"><input type="text" class="input-default" placeholder="Instagram"></div>
+            <div class="modal-label lable-social label-tg"><input type="text" class="input-default" placeholder="Telegram"></div>
+            <div class="modal-label lable-social label-wa"><input type="text" class="input-default" placeholder="WhatsApp"></div>
+          </div>
+
+          <div class="modal-row modal-row-refs">
+            <div class="modal-row-title">Реферальные ссылки</div>
+            <div class="modal-label-flex">
+              <input type="text" class="input-default-flex" placeholder="Ссылка Freetor">
+              <input type="text" class="input-default-flex" placeholder="Текст кнопки">
+            </div>
+            <div class="modal-label-flex">
+              <input type="text" class="input-default-flex" placeholder="Ссылка NovaMind">
+              <input type="text" class="input-default-flex" placeholder="Текст кнопки">
+            </div>
+            <div class="modal-label-flex">
+              <input type="text" class="input-default-flex" value="https://cp.novavi.org/ref/12313134">
+              <input type="text" class="input-default-flex" placeholder="Текст кнопки" value="Заработать">
+            </div>
+          </div>
+
+          <div class="modal-foot"><button class="lc-button lc-button-center" type="submit">Продолжить</button></div>
+        </form>
+
+        <div class="lc-setup-profile modal-setup-profile" style="display: none;">
+          <div class="lc-setup-profile-userpic upload-userpic" style="background-image: url(images/profile-userpic.png);"></div>
+
+          <div class="lc-setup-profile-username">Usename</div>
+
+          <div class="lc-setup-profile-userdata">
+            Равным образом, социально-экономическое развитие <br>
+            выявляет срочную потребность системы обучения кадров, <br>
+            соответствующей насущным потребностям.
+          </div>
+
+          <div class="lc-profile-socials">
+            <a href="javascript:void(0)" class="lc-profile-socials-link link-vk"></a>
+            <a href="javascript:void(0)" class="lc-profile-socials-link link-ig"></a>
+            <a href="javascript:void(0)" class="lc-profile-socials-link link-tg"></a>
+            <a href="javascript:void(0)" class="lc-profile-socials-link link-wa"></a>
+          </div>
+
+          <div class="lc-profile-links">
+            <a href="javascript:void(0)" class="lc-profile-link">Воронка Freetor</a>
+            <a href="javascript:void(0)" class="lc-profile-link">Воронка NovaMina</a>
+            <a href="javascript:void(0)" class="lc-profile-link">Личный кабинет NovaVi</a>
+          </div>
+
+          <div class="modal-controls">
+            <a href="javascript:void(0)" class="lc-button lc-button-modal" data-dismiss="modal">Сохранить</a>
+            <a href="javascript:void(0)" class="lc-button lc-button-modal lc-button-profile-change">Изменить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

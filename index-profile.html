@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Novavi Panel</title>
 
   <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+  <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/lc.css">
 
   <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
   <div class="lc-side">
@@ -56,13 +58,13 @@
             <div class="lc-block-title">Визитка</div>
   
             <div class="lc-setup-profile">
-              <div class="lc-setup-profile-userpic" style="background-image: url(images/profile-userpic.png);"></div>
+              <div class="lc-setup-profile-userpic upload-userpic" style="background-image: url(images/profile-userpic.png);"></div>
               <form class="lc-profile-upload">
-                <input type="file" class="lc-profile-file">
+                <input type="file" class="lc-profile-file upload-userpic-src">
               </form>
               <script>
-                $('.lc-setup-profile-userpic').click(function () {
-                  $('.lc-profile-file').trigger('click');
+                $('.upload-userpic').click(function () {
+                  $('.upload-userpic-src').trigger('click');
                 });
               </script>
               <div class="lc-setup-profile-username">Usename</div>
@@ -197,5 +199,7 @@
       </div>
     </div> -->
   </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
