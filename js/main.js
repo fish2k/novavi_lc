@@ -26,18 +26,22 @@ $(document).ready(function () {
             currentModal       = $(this).parent().parent().parent(),
             currentForm        = $('.modal-profile-form')
 
-        currentModal.removeClass('modal-theme-light modal-theme-dark modal-theme-purple')
-        changeProfileBlock.hide();
-        currentForm.show();
+            resetModal();
     })
 
     $('#profileSetup').on('hide.bs.modal', function () {
         $('.modal-profile-form').get(0).reset();
 
-        var resetModal = setTimeout(function () {
+        resetModal();
+    })
+
+    function resetModal() {
+        var reset = setTimeout(function () {
             $('.modal-content-custom').removeClass('modal-theme-light modal-theme-dark modal-theme-purple');
             $('.modal-profile-form').show();
             $('.modal-setup-profile').hide();
         }, 200)
-    })
+    }
+
+    $('#editLandingModal').modal('show')
 });

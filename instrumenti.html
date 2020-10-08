@@ -6,6 +6,7 @@
   <title>Novavi Panel</title>
 
   <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/lc.css">
 
@@ -22,8 +23,8 @@
       <div class="lc-side-navi-title">Кабинет NovaVi</div>
 
       <div class="lc-side-links">
-        <a href="javascript:void(0)" class="lc-side-link active">Главная</a>
-        <a href="javascript:void(0)" class="lc-side-link">Инструменты продаж</a>
+        <a href="javascript:void(0)" class="lc-side-link">Главная</a>
+        <a href="javascript:void(0)" class="lc-side-link active">Инструменты продаж</a>
         <a href="javascript:void(0)" class="lc-side-link">Freetor</a>
         <a href="javascript:void(0)" class="lc-side-link">NovaMind</a>
         <a href="javascript:void(0)" class="lc-side-link">Статистика обучения</a>
@@ -51,7 +52,164 @@
   </div>
 
   <div class="lc-main">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, officiis? Cum, voluptatem. Perspiciatis necessitatibus sed hic facere quod, porro culpa nulla, ipsum neque sunt vero quis consequuntur sint dolores repudiandae.
+    <div class="lc-content">
+      <div class="lc-heading">Добавленные лендинги</div>
+      <p>
+        Повседневная практика показывает, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании инновационных методов управления 
+        процессами. Сложно сказать, почему сторонники тоталитаризма в науке заблокированы в рамках своих собственных рациональных ограничений.
+      </p>
+
+      <div class="lc-l-list lc-list-added row">
+        <div class="col-lg-6 col-l col-l-item">
+          <div class="lc-l-item">
+            <a href="javascript:void(0)" class="lc-l-preview" 
+              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <div class="lc-l-body">
+              <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
+              <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
+                Для современного мира экономическая повестка сегодняшнего дня 
+                обеспечивает широкому кругу (специалистов).
+              </a>
+              <div class="lc-l-foot">
+                <a href="javascript:void(0)" class="lc-l-button lc-l-button-clear"><img src="images/copy.svg" class="lc-l-button-icon" alt=""> Ссылка</a>
+                <a href="javascript:void(0)" class="lc-l-button lc-l-button-remove lc-l-button-accent">Убрать из визитки</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-l col-l-item">
+          <div class="lc-l-item">
+            <a href="javascript:void(0)" class="lc-l-preview" 
+              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <div class="lc-l-body">
+              <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
+              <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
+                Для современного мира экономическая повестка сегодняшнего дня 
+                обеспечивает широкому кругу (специалистов).
+              </a>
+              <div class="lc-l-foot">
+                <a href="javascript:void(0)" class="lc-l-button lc-l-button-clear"><img src="images/copy.svg" class="lc-l-button-icon" alt=""> Ссылка</a>
+                <a href="javascript:void(0)" class="lc-l-button lc-l-button-add lc-l-button-accent">Добавить в визитку</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lc-content">
+      <div class="lc-heading">Нет добавленных лендингов</div>
+
+      <p>
+        Повседневная практика показывает, что высокотехнологичная концепция 
+        общественного уклада обеспечивает широкому кругу (специалистов) участие 
+        в формировании инновационных методов управления процессами. 
+        Сложно сказать, почему сторонники тоталитаризма в науке заблокированы 
+        в рамках своих собственных рациональных ограничений.
+      </p>
+    </div>
+
+    <div class="lc-content">
+      <div class="lc-heading">Каталог лендингов</div>
+
+      <div class="lc-l-list row">
+        <div class="col-lg-6 col-l col-l-item">
+          <div class="lc-l-item">
+            <a href="javascript:void(0)" class="lc-l-preview" 
+              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <div class="lc-l-body">
+              <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
+              <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
+                Для современного мира экономическая повестка сегодняшнего дня 
+                обеспечивает широкому кругу (специалистов).
+              </a>
+              <div class="lc-l-foot"><a href="javascript:void(0)" class="lc-l-button lc-l-button-show" data-toggle="modal" data-target="#editLandingModal">Открыть</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-l col-l-item">
+          <div class="lc-l-item">
+            <a href="javascript:void(0)" class="lc-l-preview" 
+              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <div class="lc-l-body">
+              <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
+              <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
+                Для современного мира экономическая повестка сегодняшнего дня 
+                обеспечивает широкому кругу (специалистов).
+              </a>
+              <div class="lc-l-foot"><a href="javascript:void(0)" class="lc-l-button lc-l-button-show" data-toggle="modal" data-target="#editLandingModal">Открыть</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-l col-l-item">
+          <div class="lc-l-item">
+            <a href="javascript:void(0)" class="lc-l-preview" 
+              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <div class="lc-l-body">
+              <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
+              <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
+                Для современного мира экономическая повестка сегодняшнего дня 
+                обеспечивает широкому кругу (специалистов).
+              </a>
+              <div class="lc-l-foot"><a href="javascript:void(0)" class="lc-l-button lc-l-button-show" data-toggle="modal" data-target="#editLandingModal">Открыть</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-l col-l-item">
+          <div class="lc-l-item">
+            <a href="javascript:void(0)" class="lc-l-preview" 
+              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <div class="lc-l-body">
+              <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
+              <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
+                Для современного мира экономическая повестка сегодняшнего дня 
+                обеспечивает широкому кругу (специалистов).
+              </a>
+              <div class="lc-l-foot"><a href="javascript:void(0)" class="lc-l-button lc-l-button-show" data-toggle="modal" data-target="#editLandingModal">Открыть</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-landing fade" id="editLandingModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-custom">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-close-abs" data-dismiss="modal"></div>
+
+        <div class="modal-custom-title">Добавление лендинга «Название лендинга»</div>
+
+        <div class="modal-landing-content">
+          <div class="modal-landing-image-top" style="background-image: url(images/modal-landing/modal-landing-image-full.svg);"></div>
+
+          <div class="modal-landing-title">Заголовок лендинга номер один</div>
+
+          <p>
+            Но активно развивающиеся страны третьего мира лишь добавляют фракционных разногласий и ассоциативно распределены по отраслям! 
+            Современные технологии достигли такого уровня, что постоянный количественный рост и сфера нашей активности предопределяет высокую 
+            востребованность соответствующих условий активизации. Предварительные выводы неутешительны: новая модель организационной 
+            деятельности выявляет срочную потребность инновационных методов управления процессами.
+          </p>
+
+          <p>
+            Но активно развивающиеся страны третьего мира лишь добавляют фракционных разногласий и ассоциативно распределены по отраслям! 
+            Современные технологии достигли такого уровня, что постоянный количественный рост и сфера нашей активности предопределяет высокую 
+            востребованность соответствующих условий активизации. Предварительные выводы неутешительны: новая модель организационной 
+            деятельности выявляет срочную потребность инновационных методов управления процессами.
+          </p>
+
+          <div class="modal-landing-embeds row">
+            <div class="col-lg-6 col-l">
+              <div class="modal-landing-embed-item modal-embed"></div>
+            </div>
+            <div class="col-lg-6 col-l">
+              <div class="modal-landing-embed-item modal-embed"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/main.js"></script>
