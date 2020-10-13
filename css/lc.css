@@ -766,6 +766,13 @@ progress {
   border-bottom-right-radius: 0;
 }
 
+.lc-gradient {
+  background-image: -moz-linear-gradient( -120deg, rgb(68,9,124) 0%, rgb(171,3,193) 100%);
+  background-image: -webkit-linear-gradient( -120deg, rgb(68,9,124) 0%, rgb(171,3,193) 100%);
+  background-image: -ms-linear-gradient( -120deg, rgb(68,9,124) 0%, rgb(171,3,193) 100%);
+  background-image: linear-gradient( -120deg, rgb(68,9,124) 0%, rgb(171,3,193) 100%);
+}
+
 .lc-setup {
   background-image: -moz-linear-gradient( -120deg, rgb(68,9,124) 0%, rgb(171,3,193) 100%);
   background-image: -webkit-linear-gradient( -120deg, rgb(68,9,124) 0%, rgb(171,3,193) 100%);
@@ -790,7 +797,7 @@ progress {
   height: 50px;
   color: #fff;
   text-decoration: none;
-  
+
   border: none;
 
   justify-content: center;
@@ -1756,4 +1763,169 @@ textarea.input-default {
   background-color: rgba(255,255,255, .5);
 
   z-index: 4;
+}
+
+.lc-acc-list {
+  margin-top: -22px;
+}
+
+.lc-acc-head {
+  display: flex;
+  height: 60px;
+
+  border-radius: var(--radius-default);
+  overflow: hidden;
+
+  background-color: #fff;
+
+  background-image: url(../images/profile-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 30px) center;
+
+  position: relative;
+  z-index: 2;
+}
+
+.lc-acc-step {
+  flex: 0 0 150px;
+  max-width: 150px;
+  padding-left: 41px;
+
+  font-size: 22px;
+  font-weight: var(--semibold);
+
+  display: flex;
+  align-items: center;
+
+  color: #fff;
+}
+
+.lc-acc-name {
+  flex: 0 0 calc(100% - 150px);
+  max-width: calc(100% - 150px);
+
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+
+  font-weight: var(--semibold);
+
+  background-repeat: no-repeat;
+  background-position: 30px center;
+
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: var(--border-color);
+
+  border-top-right-radius: var(--radius-default);
+  border-bottom-right-radius: var(--radius-default);
+}
+
+.lc-acc-name-video {
+  background-image: url(../images/step-video.svg);
+}
+
+.lc-acc-status {
+  color: var(--text-muted);
+  font-weight: normal;
+
+  margin-left: 9px;
+  padding-left: 21px;
+
+  position: relative;
+}
+
+.lc-acc-status::before {
+  position: absolute;
+  content: '—';
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.lc-acc-item.opened .lc-acc-head {
+  box-shadow: 0 15px 15px 0 rgba(0,0,0, .08);
+}
+
+.lc-acc-item:not(.active) .lc-acc-step {
+  background: rgb(142,142,142);
+  background: linear-gradient(145deg, rgba(142,142,142,1) 0%, rgba(67,67,67,1) 100%);
+}
+
+.lc-acc-body {
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  padding-left: 39px;
+  padding-right: 29px;
+  padding-bottom: 39px;
+
+  margin-top: -6px;
+
+  border-bottom-left-radius: var(--radius-default);
+  border-bottom-right-radius: var(--radius-default);
+}
+
+.lc-acc-content-row {
+  margin-left: -27.5px;
+  margin-right: -27.5px;
+}
+
+.lc-acc-content {
+  padding-top: 43px;
+}
+
+.lc-acc-content-col {
+  padding-left: 27.5px;
+  padding-right: 27.5px;
+
+  flex: 0 0 48.6%;
+  max-width: 48.6%;
+}
+
+.lc-acc-content-col:not(:first-child) {
+  flex: 0 0 51.4%;
+  max-width: 51.4%;
+}
+
+.lc-acc-content-inner {
+  margin-top: -1px;
+  line-height: 1.2;
+}
+
+.lc-acc-content-embed {
+  padding-bottom: 66.7%;
+  background-color: #f3f4f4;
+  border-radius: 24px;
+}
+
+.lc-embed-video {
+  background-image: url(../images/step-video.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90px;
+}
+
+.lc-acc-form {
+  margin-top: 27px;
+}
+
+.lc-form-style {
+  border-radius: var(--radius-default);
+  margin-bottom: 16px;
+}
+
+.lc-acc-item {
+  margin-bottom: 20px;
+}
+
+.lc-acc-name-profile {
+  background-image: url(../images/step-profile.svg);
+}
+
+.lc-acc-name-check {
+  background-image: url(../images/step-check.svg);
+}
+
+.lc-acc-name-web {
+  background-image: url(../images/step-web.svg);
 }
