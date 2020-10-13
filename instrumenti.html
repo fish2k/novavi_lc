@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/lc.css">
+  <link rel="stylesheet" href="css/lc-media.css">
 
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
@@ -35,6 +36,18 @@
   </div>
 
   <div class="lc-head">
+    <div class="r-lc-head-item">
+      <div class="header-burger">
+        <div class="burger-line line-1"></div>
+        <div class="burger-line line-2"></div>
+        <div class="burger-line line-3"></div>
+      </div>
+
+      <a href="/" class="r-lc-logo">
+        <img src="images/logo.png" alt="">
+      </a>
+    </div>
+
     <div class="lc-head-main">
       <div class="lc-socials">
         <a href="javascript:void(0)" class="lc-socials-link"><img src="images/socials/4.svg" alt="social-link"></a>
@@ -62,8 +75,7 @@
       <div class="lc-l-list lc-list-added row">
         <div class="col-lg-6 col-l col-l-item">
           <div class="lc-l-item">
-            <a href="javascript:void(0)" class="lc-l-preview" 
-              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <a href="javascript:void(0)" class="lc-l-preview"></a>
             <div class="lc-l-body">
               <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
               <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
@@ -79,8 +91,7 @@
         </div>
         <div class="col-lg-6 col-l col-l-item">
           <div class="lc-l-item">
-            <a href="javascript:void(0)" class="lc-l-preview" 
-              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <a href="javascript:void(0)" class="lc-l-preview"></a>
             <div class="lc-l-body">
               <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
               <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
@@ -115,8 +126,7 @@
       <div class="lc-l-list row">
         <div class="col-lg-6 col-l col-l-item">
           <div class="lc-l-item">
-            <a href="javascript:void(0)" class="lc-l-preview" 
-              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <a href="javascript:void(0)" class="lc-l-preview"></a>
             <div class="lc-l-body">
               <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
               <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
@@ -129,8 +139,7 @@
         </div>
         <div class="col-lg-6 col-l col-l-item">
           <div class="lc-l-item">
-            <a href="javascript:void(0)" class="lc-l-preview" 
-              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <a href="javascript:void(0)" class="lc-l-preview"></a>
             <div class="lc-l-body">
               <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
               <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
@@ -143,8 +152,7 @@
         </div>
         <div class="col-lg-6 col-l col-l-item">
           <div class="lc-l-item">
-            <a href="javascript:void(0)" class="lc-l-preview" 
-              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <a href="javascript:void(0)" class="lc-l-preview"></a>
             <div class="lc-l-body">
               <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
               <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
@@ -157,8 +165,7 @@
         </div>
         <div class="col-lg-6 col-l col-l-item">
           <div class="lc-l-item">
-            <a href="javascript:void(0)" class="lc-l-preview" 
-              style="background-image: url(images/landing-preview-placeholder.png);"></a>
+            <a href="javascript:void(0)" class="lc-l-preview"></a>
             <div class="lc-l-body">
               <a href="javascript:void(0)" class="lc-l-title lc-l-link">Название лендинга</a>
               <a href="javascript:void(0)" class="lc-l-desc lc-l-link">
@@ -201,16 +208,54 @@
 
           <div class="modal-landing-embeds row">
             <div class="col-lg-6 col-l">
-              <div class="modal-landing-embed-item modal-embed"></div>
+              <div class="modal-landing-embed-item modal-embed-photo"></div>
             </div>
             <div class="col-lg-6 col-l">
-              <div class="modal-landing-embed-item modal-embed"></div>
+              <div class="modal-landing-embed-item modal-embed-video"></div>
             </div>
           </div>
+
+          <div class="modal-landing-title">Заголовок лендинга номер два</div>
+
+          <p>
+            Текст перед списком с маркерами
+          </p>
+
+          <div class="modal-list-row row">
+            <div class="col-md-6 col-l modal-list-col">
+              <ul class="modal-list modal-list-flex">
+                <li class="modal-list-item modal-list-circle">Текст списка 1</li>
+                <li class="modal-list-item modal-list-triangle">Текст списка 2</li>
+                <li class="modal-list-item modal-list-check">Текст списка 3</li>
+              </ul>
+              <ul class="modal-list modal-list-flex">
+                <li class="modal-list-item modal-list-circle">Текст списка 1</li>
+                <li class="modal-list-item modal-list-triangle">Текст списка 2</li>
+                <li class="modal-list-item modal-list-check">Текст списка 3</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-l modal-list-col">
+              <ul class="modal-list modal-list-flex">
+                <li class="modal-list-item modal-list-circle">Текст списка 1</li>
+                <li class="modal-list-item modal-list-triangle">Текст списка 2</li>
+                <li class="modal-list-item modal-list-check">Текст списка 3</li>
+              </ul>
+              <ul class="modal-list modal-list-flex">
+                <li class="modal-list-item modal-list-circle">Текст списка 1</li>
+                <li class="modal-list-item modal-list-triangle">Текст списка 2</li>
+                <li class="modal-list-item modal-list-check">Текст списка 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-bottom">
+          <a href="javascript:void(0)" class="lc-button">Добавить лендинг</a>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="overlay"></div>
 
   <script src="js/main.js"></script>
 </body>

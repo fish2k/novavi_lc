@@ -31,6 +31,11 @@
   box-sizing: border-box;
 }
 
+img,
+svg {
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   font-family: var(--gilroy);
@@ -444,6 +449,15 @@ progress {
   display: none !important;
 }
 
+/* overlay masks */
+[class*=state-] {
+  overflow: hidden;
+}
+
+[class*=state-] .overlay {
+  display: block;
+}
+/* overlay masks */
 
 /* common styles */
 .lc-side {
@@ -776,7 +790,7 @@ progress {
   height: 50px;
   color: #fff;
   text-decoration: none;
-
+  
   border: none;
 
   justify-content: center;
@@ -801,7 +815,8 @@ progress {
 }
 
 .lc-row-stats {
-  margin-top: 235px;
+  /* margin-top: 235px; */
+  margin-top: 30px;
 }
 
 .title-muted {
@@ -1179,6 +1194,8 @@ textarea.input-default {
 
   background-image: url(../images/modal-close.svg);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 
   cursor: pointer;
 }
@@ -1526,6 +1543,12 @@ textarea.input-default {
   flex: 0 0 200px;
   max-width: 200px;
   padding-bottom: 200px;
+
+  background: rgb(132,30,182);
+  background: -moz-linear-gradient(145deg, rgba(132,30,182,1) 0%, rgba(68,9,124,1) 100%);
+  background: -webkit-linear-gradient(145deg, rgba(132,30,182,1) 0%, rgba(68,9,124,1) 100%);
+  background: linear-gradient(145deg, rgba(132,30,182,1) 0%, rgba(68,9,124,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#841eb6",endColorstr="#44097c",GradientType=1);
 }
 
 .lc-l-body {
@@ -1638,6 +1661,7 @@ textarea.input-default {
 
 .modal-landing-content {
   margin-top: 34px;
+  padding-bottom: 37px;
   line-height: 1.2;
 }
 
@@ -1651,4 +1675,85 @@ textarea.input-default {
 .modal-landing-image-top {
   padding-bottom: 35.715%;
   margin-bottom: 31px;
+}
+
+.modal-landing-embeds {
+  margin-top: 35px;
+  margin-bottom: 31px;
+}
+
+.modal-landing-embed-item {
+  padding-bottom: 72.7%;
+
+  background-color: #f3f4f4;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.modal-embed-photo {
+  background-image: url(../images/modal-landing/modal-landing-photo.svg);
+}
+
+.modal-embed-video {
+  background-image: url(../images/modal-landing/modal-landing-video.svg);
+}
+
+.modal-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.modal-list-flex {
+  flex: 0 0 46.3%;
+  max-width: 46.3%;
+}
+
+.modal-list-item {
+  padding-left: 38px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+
+  background-position: 20px 5px;
+  background-repeat: no-repeat;
+}
+
+.modal-list-col {
+  display: flex;
+}
+
+.modal-list-circle {
+  background-image: url(../images/modal-landing/circle.svg);
+}
+
+.modal-list-check {
+  background-image: url(../images/modal-landing/check.svg);
+}
+
+.modal-list-triangle {
+  background-image: url(../images/modal-landing/triangle.svg);
+}
+
+.modal-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.r-lc-head-item {
+  display: none;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: rgba(255,255,255, .5);
+
+  z-index: 4;
 }

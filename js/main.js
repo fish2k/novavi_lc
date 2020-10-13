@@ -2,7 +2,18 @@ $(document).ready(function () {
     //$('.toggle-btn').trigger('click')
 
     var themeName,
-        modalSetupProfile = $('.modal-setup-profile')
+        modalSetupProfile = $('.modal-setup-profile'),
+        burger = $('.header-burger'),
+        body   = $('body'),
+        overlay = $('.overlay');
+
+    burger.on('click', function () {
+        body.toggleClass('state-nav')
+    });
+
+    overlay.on('click', function () {
+        body.removeAttr('class')
+    })
 
     $('.theme-select-input').click(function () {
         themeName = $(this).attr('id')
@@ -21,13 +32,7 @@ $(document).ready(function () {
         modalSetupProfile.show()
     });
 
-    $('.lc-button-profile-change').click(function () {
-        var changeProfileBlock = $(this).parent().parent(),
-            currentModal       = $(this).parent().parent().parent(),
-            currentForm        = $('.modal-profile-form')
-
-            resetModal();
-    })
+    $('.lc-button-profile-change').click(resetModal);
 
     $('#profileSetup').on('hide.bs.modal', function () {
         $('.modal-profile-form').get(0).reset();
@@ -43,5 +48,5 @@ $(document).ready(function () {
         }, 200)
     }
 
-    $('#editLandingModal').modal('show')
+    // $('#editLandingModal').modal('show')
 });
