@@ -117,7 +117,29 @@
         margin-bottom: 10px;
     }
 
+    .modal-landing-content {
+        padding-bottom: 15px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .modal-list-item {
+        padding-left: 24px;
+        background-position: 8px 5px;
+    }
+
+    .modal-list-item:last-child {
+        margin-bottom: 0;
+    }
+
     .modal-list-col {
+        margin-bottom: 15px;
+    }
+    
+    .modal-landing-title {
+        font-size: 18px;
         margin-bottom: 15px;
     }
 
@@ -345,8 +367,26 @@
 }
 
 @media (max-width: 480px) {
-    p {
-        font-size: 14px;
+    .modal-landing-title {
+        margin-bottom: 10px;
+    }
+
+    .modal-landing-embeds {
+        margin-bottom: 0;
+    }
+
+    .modal-list-flex {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .modal-list-col {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .modal-list {
+        margin-bottom: 15px;
     }
 
     .lc-l-button {
