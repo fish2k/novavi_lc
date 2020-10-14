@@ -36,6 +36,31 @@
         max-width: none;
         width: 100%;
     }
+
+    .lc-acc-content-col {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .lc-acc-content-row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .lc-acc-body {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .lc-acc-content {
+        padding-top: 25px;
+    }
+
+    .lc-acc-content .lc-heading {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -91,6 +116,33 @@
         max-width: 100%;
     }
 
+    .lc-embed-video {
+        background-size: 12%;
+    }
+
+    .lc-acc-head {
+        height: 45px;
+
+        background-position: calc(100% - 15px) center;
+    }
+
+    .lc-acc-step {
+        font-size: 18px;
+
+        flex: 0 0 100px;
+        max-width: 100px;
+
+        padding-left: 20px;
+    }
+
+    .lc-acc-name {
+        flex: 0 0 calc(100% - 100px);
+        max-width: calc(100% - 100px);
+        padding-left: 50px;
+
+        background-position: 15px center;
+    }
+
     .lc-block {
         margin-bottom: 15px;
     }
@@ -115,6 +167,18 @@
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 10px;
+    }
+
+    .lc-acc-content-col:not(:first-child),
+    .lc-acc-content-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        padding-top: 20px;
+    }
+
+    .lc-acc-list {
+        margin-top: 0;
     }
 
     .modal-landing-content {
@@ -367,6 +431,53 @@
 }
 
 @media (max-width: 480px) {
+    .lc-acc-content {
+        padding-top: 5px;
+    }
+
+    .lc-acc-list {
+        margin-left: -17px;
+        margin-right: -17px;
+    }
+
+    .lc-acc-head {
+        border-radius: 0;
+    }
+
+    .lc-acc-content-row {
+        margin-left: -17px;
+        margin-right: -17px;
+    }
+
+    .lc-acc-content-col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .lc-acc-name {
+        border-radius: 0;
+        background-size: 9px;
+        padding-left: 35px;
+    }
+
+    .lc-acc-step {
+        flex: 0 0 80px;
+        max-width: 80px;
+        font-size: 14px;
+    }
+
+    .lc-acc-name {
+        flex: 0 0 calc(100% - 80px);
+        max-width: calc(100% - 80px);
+
+        font-size: 12px;
+    }
+
+    .lc-acc-content .lc-heading {
+        line-height: 1;
+        font-size: 18px;
+    }
+
     .modal-landing-title {
         margin-bottom: 10px;
     }
