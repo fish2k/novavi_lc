@@ -48,5 +48,9 @@ $(document).ready(function () {
         }, 200)
     }
 
+    $('.lc-step-item').click(function () {
+        $(this).find('.lc-step-body').toggleClass('show').slideToggle()
+    })
+
     // $('#editLandingModal').modal('show')
 });

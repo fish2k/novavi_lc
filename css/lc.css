@@ -16,9 +16,6 @@
   --radius-default: 10px;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
 
 ::selection {
   background-color: var(--accent);
@@ -1928,4 +1925,741 @@ textarea.input-default {
 
 .lc-acc-name-web {
   background-image: url(../images/step-web.svg);
+}
+
+/* stats */
+:root {
+  --nova: #1477a0;
+  --nova-light: #17a2c9;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #a503b3;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a503be;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #e5e2e5;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #e5e2e5;
+}
+::-webkit-scrollbar-track:active {
+  background: #e5e2e5;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.nova-stats .lc-stats-icon::before {
+  background-color: #0e546d;
+}
+
+.lc-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lc-toggle-check {
+  appearance: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.lc-toggle {
+  flex: 0 0 50%;
+  max-width: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+  z-index: 2;
+}
+
+.lc-toggle-block {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 200px;
+  max-width: 200px;
+}
+
+.lc-toggle-inner {
+  flex: 0 0 50px;
+  max-width: 50px;
+  height: 25px;
+
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 0;
+
+  position: relative;
+
+  background-color: var(--accent);
+
+  cursor: pointer;
+}
+
+.lc-toggle-btn {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  background-color: #fff;
+  width: 23px;
+  border-radius: 15px;
+
+  transition: all .2s ease;
+}
+
+.lc-toggle-label {
+  color: #bcbcbc;
+  font-weight: var(--semibold)
+}
+
+.lc-toggle-label.active {
+  color: var(--accent)
+}
+
+.lc-toggle-check:checked + .lc-toggle-btn {
+  left: calc(100% - 24px)
+}
+
+.lc-toggle-inner.state {
+  background-color: var(--nova);
+}
+
+.nova-stats .lc-toggle-label.active {
+  color: var(--nova)
+}
+
+.nova-stats .lc-stats-list-count {
+  color: var(--nova) 
+}
+
+.nova-stats .lc-stats-list {
+  columns: 2;
+}
+
+.lc-datepick-icon {
+  fill: #841eb6;
+  fill-rule: evenodd;
+}
+
+.nova-stats .lc-datepick-icon {
+  fill: var(--nova);
+}
+
+.chart-dates {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+
+  margin-top: 40px;
+}
+
+.chart-dates-range {
+  display: flex;
+  border-collapse: collapse;
+
+  margin-right: 20px;
+}
+
+.chart-dates-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  border: 1px solid #bcbcbc;
+  margin-left: -1px;
+
+  background-color: #fff;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.chart-dates-item:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.chart-dates-item:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.chart-dates-item.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.nova-stats .chart-dates-item:hover {
+  border-color: var(--nova);
+  color: var(--nova);
+}
+
+.chart-dates-item.active:hover {
+  color: #fff;
+}
+
+.nova-stats .chart-dates-item.active {
+  background-color: var(--nova);
+  border-color: var(--nova);
+}
+
+.chart-dates-item:hover {
+  z-index: 3;
+  border-color: var(--accent)
+}
+
+.chart-datepick {
+  display: flex;
+  height: 40px;
+  align-items: center;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border: 1px solid var(--accent);
+  background-color: #fff;
+
+  border-radius: 5px;
+}
+
+.nova-stats .chart-datepick {
+  border-color: var(--nova);
+}
+
+.chart-datepick-value {
+  padding-left: 15px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.nova-stats .chart-datepick-value {
+  color: var(--nova)
+}
+
+.lc-toggle-chart {
+  padding-right: 30px;
+  position: relative;
+}
+
+.lc-toggle-chart::before {
+  position: absolute;
+  content: '';
+  top: 7px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/chart-arrow.svg);
+  background-repeat: no-repeat;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.chart-section {
+  margin-top: 30px;
+}
+
+.chart-section canvas {
+  margin-top: 30px;
+}
+
+.lc-stats-row {
+  margin-bottom: 20px;
+}
+
+.lc-block-head-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top-left-radius: var(--radius-default);
+  border-top-right-radius: var(--radius-default);
+
+  color: #fff;
+
+  padding-left: var(--offset-padding);
+  padding-right: var(--offset-padding);
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  background: rgb(132,30,182);
+  background: linear-gradient(145deg, rgba(132,30,182,1) 0%, rgba(68,9,124,1) 100%);
+}
+
+.lc-block-head + .lc-block-inner {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: auto;
+}
+
+.nova-block .lc-block-head-inner {
+  background: rgb(132,30,182);
+  background: linear-gradient(145deg, #0c4156 0%, var(--nova-light) 100%);
+}
+
+.lc-block-step {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-right: 15px;
+  border: 1px solid #fff;
+  color: #fff;
+
+  border-radius: var(--radius-default);
+  text-decoration: none;
+}
+
+.lc-block-step:last-child {
+  margin-right: 0;  
+}
+
+.lc-block-step:hover,
+.lc-block-step.active {
+  background-color: #fff;
+  color: var(--purple-dark);
+}
+
+.lc-head-search {
+  padding: 10px var(--offset-padding);
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: var(--border-color);
+
+  background-image: url(../images/notice-head.svg);
+  background-position: calc(100% - 80px) center;
+  background-repeat: no-repeat;
+}
+
+.lc-input {
+  border: 1px solid #bcbcbc;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.lc-search-input {
+  background-image: url(../images/search-lc.svg);
+  background-repeat: no-repeat;
+  background-position: 20px center;
+
+  padding-left: 50px;
+}
+
+.lc-profile-nameletter {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--accent);
+  border-radius: 50%;
+
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: var(--semibold);
+}
+
+.lc-profile-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lc-profile-item::before {
+  top: 50%;
+  right: 15px;
+}
+
+.lc-step-body {
+  display: none;
+  position: relative;
+  top: -1px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0px 0px 30px 0px rgba(165, 3, 190, 0.1);
+}
+
+.lc-step-body::before {
+  position: absolute;
+  content: '';
+  top: -20px;
+  left: 58px;
+  width: 68px;
+  height: 20px;
+
+  transition: all .3s ease;
+
+  background-image: url(../images/lc-step-triagnle.svg);
+  opacity: 0;
+}
+
+.lc-step-body.show::before {
+  opacity: 1;
+}
+
+.nova-block .lc-step-body {
+  box-shadow: 0px 0px 30px 0px rgba(20, 119, 160, 0.1);
+}
+
+.lc-step-info-link {
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.lc-step-info-link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.lc-user-check {
+  fill: #a503be;
+  fill-rule: evenodd;
+}
+
+.lc-step-steps-count {
+  flex: 0 0 90px;
+  max-width: 90px;
+
+  background-image: url(../images/user-step-empty.svg);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  padding-left: 20px;
+
+  font-weight: var(--semibold);
+}
+
+.step-completed {
+  background-image: url(../images/user-step-check.svg);
+  color: var(--accent);
+}
+
+.nova-block .step-completed {
+  background-image: url(../images/step-check-nova.svg);
+  color: var(--nova)
+}
+
+.lc-step-steps {
+  margin-top: 15px;
+}
+
+.lc-step-steps-item {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.lc-step-steps-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  flex: 0 0 calc(100% - 90px);
+  max-width: calc(100% - 90px);
+}
+
+.lc-step-steps-status {
+  padding: 3px 15px;
+  background-color: transparent;
+  color: var(--accent);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.lc-step-steps-status.active {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.lc-step-steps-status:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nova-block .lc-step-steps-status.active {
+  background-color: var(--nova);
+}
+
+.lc-step-new {
+  background-image: url(../images/notice-new.svg);
+  background-position: calc(100% - 40px) center;
+  background-repeat: no-repeat;
+}
+
+.nova-block .lc-profile-nameletter {
+  background-color: var(--nova);
+}
+
+.nova-block .lc-profile-btn:hover {
+  color: var(--nova)
+}
+
+.lc-step-list {
+  max-height: 400px;
+  overflow-y: auto;
+
+  margin-left: -20px;
+  margin-right: -20px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nova-block .lc-step-list::-webkit-scrollbar-thumb {
+  background: var(--nova) !important;
+}
+
+.nova-block .lc-step-list::-webkit-scrollbar-thumb:hover {
+  background: var(--nova) !important;
+}
+.nova-block .lc-step-list::-webkit-scrollbar-thumb:active {
+  background: var(--nova) !important;
+}
+
+.nova-block .lc-step-steps-status:not(.active) {
+  color: var(--nova)
+}
+
+#chart1,
+#chart2 {
+  height: 300px;
+}
+
+.lc-banner {
+  
+}
+
+/* media */
+@media (min-width: 1500px) {
+  .chart-dates {
+    flex-direction: unset !important;
+  }
+}
+
+@media (max-width: 1500px) {
+  .chart-dates {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .lc-block-step {
+    margin-right: 5px;
+    font-size: 13px;
+    padding: 2px 10px;
+  }
+
+  .lc-block-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lc-toggle {
+    flex: unset;
+    max-width: none;
+    width: 200px;
+    margin-top: 10px;
+  }
+
+  .lc-block-title {
+    line-height: 1.2;
+  }
+
+  .chart-dates-range {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .chart-dates {
+    justify-content: center;
+  }
+
+  .lc-step-item .lc-profile-btn::before {
+    top: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-dates {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .lc-head-search {
+    background-position: calc(100% - 60px) center;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-section {
+    display: none;
+  }
+
+  .lc-search-input {
+    background-position: 14px center;
+    padding-left: 40px;
+  }
+
+  .lc-input {
+    height: 34px;
+  }
+
+  .lc-step-list {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .lc-step-body::before {
+    top: -11px;
+  }
+
+  .lc-toggle-label {
+    font-size: 14px;
+  }
+
+  .lc-step-steps {
+    font-size: 12px;
+  }
+
+  .lc-step-steps-count {
+    flex: 0 0 20px;
+    max-width: 20px;
+    height: 20px;
+    font-size: 0;
+    display: none;
+  }
+
+  .step-completed {
+    display: flex;
+  }
+
+  .lc-step-body::before {
+    left: 25px;
+  }
+
+  .lc-step-info-link {
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .lc-step-steps-body {
+    flex: 0 0 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+
+  .lc-step-steps-q {
+    padding-right: 15px;
+  }
+
+  .lc-block-step {
+    display: none;
+  }
+
+  .chart-dates-item,
+  .chart-datepick-value {
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .lc-step-item .lc-profile-name {
+    display: block;
+    padding-left: 15px;
+  }
+
+  .lc-step-item .lc-step-itemэ::before {
+    top: 5000px
+  }
+
+  .lc-step-item .lc-profile-btn::before {
+    top: 50%;
+  }
+
+  .lc-step-steps-status {
+    font-size: 12px;
+  }
+
+  .lc-row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .lc-block {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+  }
+
+  .lc-block-inner,
+  .lc-block-head-inner {
+    border-radius: 0;
+  }
+
+  .chart-datepick,
+  .chart-dates-item {
+    height: 30px;
+  }
+
+  .lc-profile-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .lc-search-input {
+    width: 200px;
+  }
+
+  .lc-head-search {
+    background-position: calc(100% - 62px) center;
+  }
+}
+
+@media (min-width: 320px) {
+  .nova-stats .lc-stats-list {
+    columns: unset;
+  }
+
+  .chart-dates {
+    flex-direction: column;
+    align-items: center;
+  }
 }

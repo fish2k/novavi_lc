@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Novavi Panel</title>
+
+  <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/lc.css">
+  <link rel="stylesheet" href="css/lc-media.css">
+
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+<body>
+  <div class="lc-side">
+    <a href="/" class="lc-side-logo">
+      <img src="/images/logo.png" alt="Кабинет NovaVi">
+    </a>
+
+    <div class="lc-side-navi">
+      <div class="lc-side-navi-title">Кабинет NovaVi</div>
+
+      <div class="lc-side-links">
+        <a href="javascript:void(0)" class="lc-side-link active">Главная</a>
+        <a href="javascript:void(0)" class="lc-side-link">Инструменты продаж</a>
+        <a href="javascript:void(0)" class="lc-side-link">Freetor</a>
+        <a href="javascript:void(0)" class="lc-side-link">NovaMind</a>
+        <a href="javascript:void(0)" class="lc-side-link">Статистика обучения</a>
+        <a href="javascript:void(0)" class="lc-side-link">Достижения</a>
+        <a href="javascript:void(0)" class="lc-side-link link-logout">Выйти</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="lc-head">
+    <div class="r-lc-head-item">
+      <div class="header-burger">
+        <div class="burger-line line-1"></div>
+        <div class="burger-line line-2"></div>
+        <div class="burger-line line-3"></div>
+      </div>
+
+      <a href="/" class="r-lc-logo">
+        <img src="images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="lc-head-main">
+      <div class="lc-socials">
+        <a href="javascript:void(0)" class="lc-socials-link"><img src="images/socials/4.svg" alt="social-link"></a>
+        <a href="javascript:void(0)" class="lc-socials-link"><img src="images/socials/3.svg" alt="social-link"></a>
+        <a href="javascript:void(0)" class="lc-socials-link"><img src="images/socials/2.svg" alt="social-link"></a>
+        <a href="javascript:void(0)" class="lc-socials-link"><img src="images/socials/1.svg" alt="social-link"></a>
+      </div>
+      <a href="javascript:void(0)" class="lc-profile-btn">
+        <div class="lc-profile-userpic">
+          <img src="images/ava.svg" alt="Username">
+        </div>
+        <div class="lc-profile-name">Username</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="lc-main">
+    <div class="lc-row lc-stats-row">
+      <div class="col-lg-6 lc-block">
+        <div class="lc-block-inner lc-block-stats">
+          <div class="lc-block-header">
+            <div class="lc-block-title">Статистика лендингов</div>
+            <div class="lc-toggle">
+              <div class="lc-toggle-block">
+                <span class="lc-toggle-label active">Freetor</span>
+                <label class="lc-toggle-inner">
+                  <input type="checkbox" class="lc-toggle-check">
+                  <div class="lc-toggle-btn"></div>
+                </label>
+                <span class="lc-toggle-label">NovaMind</span>
+              </div>
+            </div>
+          </div>
+          <div class="chart-dates">
+            <div class="chart-dates-range">
+              <a href="javascript:void(0)" class="chart-dates-item">Сегодня</a>
+              <a href="javascript:void(0)" class="chart-dates-item">Вчера</a>
+              <a href="javascript:void(0)" class="chart-dates-item active">Неделя</a>
+            </div>
+            <div class="chart-datepick">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14.594,16.000 L1.406,16.000 C0.631,16.000 -0.000,15.369 -0.000,14.594 C-0.000,14.414 -0.000,3.349 -0.000,3.281 C-0.000,2.506 0.631,1.875 1.406,1.875 L1.875,1.875 L1.875,1.406 C1.875,0.631 2.506,-0.000 3.281,-0.000 C4.057,-0.000 4.687,0.631 4.687,1.406 L4.687,1.875 L6.625,1.875 L6.625,1.406 C6.625,0.631 7.256,-0.000 8.031,-0.000 C8.807,-0.000 9.437,0.631 9.437,1.406 L9.437,1.875 L11.312,1.875 L11.312,1.406 C11.312,0.631 11.943,-0.000 12.719,-0.000 C13.494,-0.000 14.125,0.631 14.125,1.406 L14.125,1.875 L14.594,1.875 C15.369,1.875 16.000,2.506 16.000,3.281 C16.000,3.434 16.000,14.507 16.000,14.594 C16.000,15.369 15.369,16.000 14.594,16.000 ZM3.750,1.406 C3.750,1.148 3.540,0.937 3.281,0.937 C3.023,0.937 2.812,1.148 2.812,1.406 L2.812,3.281 C2.812,3.540 3.023,3.750 3.281,3.750 C3.540,3.750 3.750,3.540 3.750,3.281 L3.750,1.406 ZM8.500,1.406 C8.500,1.148 8.290,0.937 8.031,0.937 C7.773,0.937 7.562,1.148 7.562,1.406 L7.562,3.281 C7.562,3.540 7.773,3.750 8.031,3.750 C8.290,3.750 8.500,3.540 8.500,3.281 L8.500,1.406 ZM13.187,1.406 C13.187,1.148 12.977,0.937 12.719,0.937 C12.460,0.937 12.250,1.148 12.250,1.406 L12.250,3.281 C12.250,3.540 12.460,3.750 12.719,3.750 C12.977,3.750 13.187,3.540 13.187,3.281 L13.187,1.406 ZM15.062,3.281 C15.062,3.023 14.852,2.812 14.594,2.812 L14.125,2.812 L14.125,3.281 C14.125,4.057 13.494,4.687 12.719,4.687 C11.943,4.687 11.312,4.057 11.312,3.281 L11.312,2.812 L9.437,2.812 L9.437,3.281 C9.437,4.057 8.807,4.687 8.031,4.687 C7.256,4.687 6.625,4.057 6.625,3.281 L6.625,2.812 L4.687,2.812 L4.687,3.281 C4.687,4.057 4.057,4.687 3.281,4.687 C2.506,4.687 1.875,4.057 1.875,3.281 L1.875,2.812 L1.406,2.812 C1.148,2.812 0.937,3.023 0.937,3.281 L0.937,5.687 L15.062,5.687 L15.062,3.281 ZM15.062,6.625 L0.937,6.625 L0.937,14.594 C0.937,14.852 1.148,15.062 1.406,15.062 L14.594,15.062 C14.852,15.062 15.062,14.852 15.062,14.594 L15.062,6.625 ZM13.656,14.125 L2.344,14.125 C2.085,14.125 1.875,13.915 1.875,13.656 L1.875,8.031 C1.875,7.772 2.085,7.562 2.344,7.562 L13.656,7.562 C13.915,7.562 14.125,7.772 14.125,8.031 L14.125,13.656 C14.125,13.915 13.915,14.125 13.656,14.125 ZM4.687,8.500 L2.812,8.500 L2.812,10.375 L4.687,10.375 L4.687,8.500 ZM4.687,11.312 L2.812,11.312 L2.812,13.187 L4.687,13.187 L4.687,11.312 ZM7.562,8.500 L5.625,8.500 L5.625,10.375 L7.562,10.375 L7.562,8.500 ZM7.562,11.312 L5.625,11.312 L5.625,13.187 L7.562,13.187 L7.562,11.312 ZM10.375,8.500 L8.500,8.500 L8.500,10.375 L10.375,10.375 L10.375,8.500 ZM10.375,11.312 L8.500,11.312 L8.500,13.187 L10.375,13.187 L10.375,11.312 ZM13.187,8.500 L11.312,8.500 L11.312,10.375 L13.187,10.375 L13.187,8.500 ZM13.187,11.312 L11.312,11.312 L11.312,13.187 L13.187,13.187 L13.187,11.312 Z" class="lc-datepick-icon"/>
+              </svg>
+              <div class="chart-datepick-value">7 - 14 окт 2020</div>
+            </div>
+          </div>
+          <div class="lc-stats-inner">
+            <div class="lc-stats-list">
+              <div class="lc-stats-list-item">
+                <div class="lc-stats-list-count">33</div>
+                <div class="lc-stats-list-name">переходов на лендинг</div>
+              </div>
+              <div class="lc-stats-list-item">
+                <div class="lc-stats-list-count">12</div>
+                <div class="lc-stats-list-name">переходов с лендинга в бот</div>
+              </div>
+              <div class="lc-stats-list-item">
+                <div class="lc-stats-list-count">4</div>
+                <div class="lc-stats-list-name">регистраций после перехода с бота</div>
+              </div>
+            </div>
+            <div class="lc-stats-icon"><img src="images/stats-icon-1.svg" alt="" class="lc-stats-icon-src"></div>
+          </div>
+
+          <div class="chart-section">
+            <div class="lc-block-header">
+              <div class="lc-block-title">График, сводка</div>
+              <div class="lc-toggle-chart text-muted">Скрыть график</div>
+            </div>
+
+            <div class="chart-inner">
+              <canvas id="chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 lc-block">
+        <div class="lc-block-inner nova-stats lc-block-stats">
+          <div class="lc-block-header">
+            <div class="lc-block-title">Статистика обучения</div>
+            <div class="lc-toggle">
+              <div class="lc-toggle-block">
+                <span class="lc-toggle-label">Freetor</span>
+                <label class="lc-toggle-inner state">
+                  <input type="checkbox" class="lc-toggle-check" checked>
+                  <div class="lc-toggle-btn"></div>
+                </label>
+                <span class="lc-toggle-label active">NovaMind</span>
+              </div>
+            </div>
+          </div>
+          <div class="chart-dates">
+            <div class="chart-dates-range">
+              <a href="javascript:void(0)" class="chart-dates-item">Сегодня</a>
+              <a href="javascript:void(0)" class="chart-dates-item">Вчера</a>
+              <a href="javascript:void(0)" class="chart-dates-item active">Неделя</a>
+            </div>
+            <div class="chart-datepick">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14.594,16.000 L1.406,16.000 C0.631,16.000 -0.000,15.369 -0.000,14.594 C-0.000,14.414 -0.000,3.349 -0.000,3.281 C-0.000,2.506 0.631,1.875 1.406,1.875 L1.875,1.875 L1.875,1.406 C1.875,0.631 2.506,-0.000 3.281,-0.000 C4.057,-0.000 4.687,0.631 4.687,1.406 L4.687,1.875 L6.625,1.875 L6.625,1.406 C6.625,0.631 7.256,-0.000 8.031,-0.000 C8.807,-0.000 9.437,0.631 9.437,1.406 L9.437,1.875 L11.312,1.875 L11.312,1.406 C11.312,0.631 11.943,-0.000 12.719,-0.000 C13.494,-0.000 14.125,0.631 14.125,1.406 L14.125,1.875 L14.594,1.875 C15.369,1.875 16.000,2.506 16.000,3.281 C16.000,3.434 16.000,14.507 16.000,14.594 C16.000,15.369 15.369,16.000 14.594,16.000 ZM3.750,1.406 C3.750,1.148 3.540,0.937 3.281,0.937 C3.023,0.937 2.812,1.148 2.812,1.406 L2.812,3.281 C2.812,3.540 3.023,3.750 3.281,3.750 C3.540,3.750 3.750,3.540 3.750,3.281 L3.750,1.406 ZM8.500,1.406 C8.500,1.148 8.290,0.937 8.031,0.937 C7.773,0.937 7.562,1.148 7.562,1.406 L7.562,3.281 C7.562,3.540 7.773,3.750 8.031,3.750 C8.290,3.750 8.500,3.540 8.500,3.281 L8.500,1.406 ZM13.187,1.406 C13.187,1.148 12.977,0.937 12.719,0.937 C12.460,0.937 12.250,1.148 12.250,1.406 L12.250,3.281 C12.250,3.540 12.460,3.750 12.719,3.750 C12.977,3.750 13.187,3.540 13.187,3.281 L13.187,1.406 ZM15.062,3.281 C15.062,3.023 14.852,2.812 14.594,2.812 L14.125,2.812 L14.125,3.281 C14.125,4.057 13.494,4.687 12.719,4.687 C11.943,4.687 11.312,4.057 11.312,3.281 L11.312,2.812 L9.437,2.812 L9.437,3.281 C9.437,4.057 8.807,4.687 8.031,4.687 C7.256,4.687 6.625,4.057 6.625,3.281 L6.625,2.812 L4.687,2.812 L4.687,3.281 C4.687,4.057 4.057,4.687 3.281,4.687 C2.506,4.687 1.875,4.057 1.875,3.281 L1.875,2.812 L1.406,2.812 C1.148,2.812 0.937,3.023 0.937,3.281 L0.937,5.687 L15.062,5.687 L15.062,3.281 ZM15.062,6.625 L0.937,6.625 L0.937,14.594 C0.937,14.852 1.148,15.062 1.406,15.062 L14.594,15.062 C14.852,15.062 15.062,14.852 15.062,14.594 L15.062,6.625 ZM13.656,14.125 L2.344,14.125 C2.085,14.125 1.875,13.915 1.875,13.656 L1.875,8.031 C1.875,7.772 2.085,7.562 2.344,7.562 L13.656,7.562 C13.915,7.562 14.125,7.772 14.125,8.031 L14.125,13.656 C14.125,13.915 13.915,14.125 13.656,14.125 ZM4.687,8.500 L2.812,8.500 L2.812,10.375 L4.687,10.375 L4.687,8.500 ZM4.687,11.312 L2.812,11.312 L2.812,13.187 L4.687,13.187 L4.687,11.312 ZM7.562,8.500 L5.625,8.500 L5.625,10.375 L7.562,10.375 L7.562,8.500 ZM7.562,11.312 L5.625,11.312 L5.625,13.187 L7.562,13.187 L7.562,11.312 ZM10.375,8.500 L8.500,8.500 L8.500,10.375 L10.375,10.375 L10.375,8.500 ZM10.375,11.312 L8.500,11.312 L8.500,13.187 L10.375,13.187 L10.375,11.312 ZM13.187,8.500 L11.312,8.500 L11.312,10.375 L13.187,10.375 L13.187,8.500 ZM13.187,11.312 L11.312,11.312 L11.312,13.187 L13.187,13.187 L13.187,11.312 Z" class="lc-datepick-icon"/>
+              </svg>
+              <div class="chart-datepick-value">7 - 14 окт 2020</div>
+            </div>
+          </div>
+          <div class="lc-stats-inner">
+            <div class="lc-stats-list">
+              <div class="lc-stats-list-item">
+                <div class="lc-stats-list-count">152</div>
+                <div class="lc-stats-list-name">переходов по ссылке</div>
+              </div>
+              <div class="lc-stats-list-item">
+                <div class="lc-stats-list-count">79</div>
+                <div class="lc-stats-list-name">зарегистрировалось</div>
+              </div>
+              <div class="lc-stats-list-item">
+                <div class="lc-stats-list-count">51</div>
+                <div class="lc-stats-list-name">человек на этапах</div>
+              </div>
+              <div class="lc-stats-list-item">
+                <div class="lc-stats-list-count">12</div>
+                <div class="lc-stats-list-name">закончили обучение</div>
+              </div>
+              <div class="lc-stats-list-item">
+                <div class="lc-stats-list-count">5</div>
+                <div class="lc-stats-list-name">совершили покупку</div>
+              </div>
+            </div>
+            <div class="lc-stats-icon"><img src="images/stats-icon-3.svg" alt="" class="lc-stats-icon-src"></div>
+          </div>
+
+          <div class="chart-section">
+            <div class="lc-block-header">
+              <div class="lc-block-title">График, сводка</div>
+              <div class="lc-toggle-chart text-muted">Скрыть график</div>
+            </div>
+
+            <div class="chart-inner">
+              <canvas id="chart2"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lc-row">
+      <div class="col-lg-6 lc-block">
+        <div class="lc-block-head">
+          <div class="lc-block-head-inner">
+            <div class="lc-block-title">Freetor</div>
+
+            <div class="lc-block-steps">
+              <a href="javascript:void(0)" class="lc-block-step">Шаг 1</a>
+              <a href="javascript:void(0)" class="lc-block-step">Шаг 2</a>
+              <a href="javascript:void(0)" class="lc-block-step">Шаг 3</a>
+              <a href="javascript:void(0)" class="lc-block-step">Шаг 4</a>
+              <a href="javascript:void(0)" class="lc-block-step">Все</a>
+            </div>
+          </div>
+
+          <div class="lc-head-search">
+            <form class="lc-head-search-form">
+              <input type="text" class="lc-input lc-search-input" placeholder="Имя">
+            </form>
+          </div>
+        </div>
+        <div class="lc-block-inner">
+          <div class="lc-step-list">
+            <div class="lc-step-item lc-step-new">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-step-item lc-step-new">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-step-item">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-step-item">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-step-item">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 lc-block nova-block">
+        <div class="lc-block-head">
+          <div class="lc-block-head-inner">
+            <div class="lc-block-title">Freetor</div>
+
+            <div class="lc-block-steps">
+              <a href="javascript:void(0)" class="lc-block-step">Шаг 1</a>
+              <a href="javascript:void(0)" class="lc-block-step">Шаг 2</a>
+              <a href="javascript:void(0)" class="lc-block-step">Шаг 3</a>
+              <a href="javascript:void(0)" class="lc-block-step">Шаг 4</a>
+              <a href="javascript:void(0)" class="lc-block-step">Все</a>
+            </div>
+          </div>
+
+          <div class="lc-head-search">
+            <form class="lc-head-search-form">
+              <input type="text" class="lc-input lc-search-input" placeholder="Имя">
+            </form>
+          </div>
+        </div>
+        <div class="lc-block-inner">
+          <div class="lc-step-list">
+            <div class="lc-step-item lc-step-new">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-step-item lc-step-new">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-step-item">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-step-item">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-step-item">
+              <a href="javascript:void(0)" class="lc-profile-btn lc-profile-item">
+                <div class="lc-profile-userpic">
+                  <div class="lc-profile-nameletter">U</div>
+                </div>
+                <div class="lc-profile-name">Username</div>
+              </a>
+              <div class="lc-step-body">
+                <div class="lc-step-info">
+                  <a href="javascript:void(0)" class="lc-step-info-link">+7 (987) 654 32-10</a>
+                  <a href="javascript:void(0)" class="lc-step-info-link">example@mail.com</a>
+                </div>
+                <div class="lc-step-steps">
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 1</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 2</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count step-completed">Шаг 3</div>
+                    <div class="lc-step-steps-body"><span class="lc-step-steps-q">Ответ: “Короткий ответ на вопрос/задание из шага”</span><a href="" class="lc-step-steps-status active">Прочитать</a></div>
+                  </div>
+                  <div class="lc-step-steps-item">
+                    <div class="lc-step-steps-count">Шаг 4</div>
+                    <div class="lc-step-steps-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>
